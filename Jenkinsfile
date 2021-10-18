@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t alex4nder-dockerhub/myrepo:latest .'
+				sh 'docker build -t alex4nder/myrepo:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push alex4nder-dockerhub/myrepo:latest'
+				sh 'docker push alex4nder/myrepo:latest'
 			}
 		}
 	}
