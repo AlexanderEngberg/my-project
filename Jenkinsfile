@@ -18,7 +18,7 @@ pipeline{
 
 		stage('Test') {
 			steps {
-				sh 'npm --prefix /myportfolio run test'
+				sh 'npm test --prefix ./myportfolio'
 			}
 		}
 
