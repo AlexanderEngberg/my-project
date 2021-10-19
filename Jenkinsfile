@@ -12,7 +12,7 @@ pipeline{
 
 		stage('Install dependencies') {
 			steps {
-				sh 'npm install --prefix /myportfolio'
+				sh 'npm install --prefix ./myportfolio'
 			}
 		}
 
