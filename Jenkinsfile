@@ -8,6 +8,13 @@ pipeline{
 
 	stages {
 
+		stage('gitclone') {
+
+			steps {
+				git 'https://github.com/AlexanderEngberg/my-project.git'
+			}
+		}
+
 		stage('Build') {
 
 			steps {
