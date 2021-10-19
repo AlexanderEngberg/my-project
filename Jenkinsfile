@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t alex4nder/myrepo:latest -f portfolio/Dockerfile'
+				sh 'docker build -t alex4nder/myrepo:latest -f portfolio/Dockerfile .'
 			}
 		}
 
