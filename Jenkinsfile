@@ -2,16 +2,30 @@ pipeline{
 
 	agent any
 
+	tools {nodejs "node"}
+
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('alex4nder-dockerhub')
 	}
 
 	stages {
 
+		stage('Install dependencies') {
+			steps {
+				sh 'npm install'
+			}
+		}
+
+		stage('Test') {
+			steps {
+				sh 'npm test'
+			}
+		}
+
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t alex4nder/myrepo:latest -f portfolio/Dockerfile .'
+				sh 'docker build -t alex4nder/myrepo:latest -f myportfolio/Dockerfile .'
 			}
 		}
 
