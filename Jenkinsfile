@@ -12,13 +12,13 @@ pipeline{
 
 		stage('Install dependencies') {
 			steps {
-				sh 'npm install --prefix ./myportfolio'
+				sh 'npm install --prefix ./client'
 			}
 		}
 
 		stage('Test') {
 			steps {
-				sh 'npm test --prefix ./myportfolio'
+				sh 'npm test --prefix ./client'
 			}
 		}
 

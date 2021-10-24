@@ -2,10 +2,10 @@ FROM node:12 AS build
 
 WORKDIR /app
 
-COPY ./myportfolio/package.json ./
+COPY ./client/package.json ./
 
 RUN npm install
-COPY ./myportfolio ./
+COPY ./client ./
 RUN npm run build
 
 FROM nginx:1.19-alpine
