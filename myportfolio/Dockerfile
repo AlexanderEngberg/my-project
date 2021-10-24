@@ -5,7 +5,7 @@ WORKDIR /app
 COPY ./myportfolio/package.json ./
 
 RUN npm install
-COPY . /myportfolio/
+COPY . /myportfolio
 RUN npm run build
 
 FROM nginx:1.19-alpine
