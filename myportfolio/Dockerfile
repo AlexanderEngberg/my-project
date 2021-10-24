@@ -1,8 +1,8 @@
 FROM node:12 AS build
 
-WORKDIR /usr/app
+WORKDIR /app
 
-COPY package.json ./
+COPY ./myportfolio/package.json ./
 
 RUN npm install
 COPY . ./
